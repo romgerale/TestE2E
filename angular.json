@@ -60,9 +60,10 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
-            "browserTarget": "test-e2e-app:build"
+            "browserTarget": "test-e2e-app:build",
+			"extraWebpackConfig": "e2e/webpack.config.coverage.js"
           },
           "configurations": {
             "production": {
