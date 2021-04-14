@@ -11,10 +11,15 @@ var istanbul = require("istanbul-lib-coverage");
 var map = istanbul.createCoverageMap({});
 
 exports.config = {
+  //chromeDriver: '../chromedriver',
   allScriptsTimeout: 11000,
   specs: [
     './src/**/*.e2e-spec.ts'
   ],
+  suites: {
+    critical: ['./src/app.e2e-spec.ts'],
+    core: ['./src/app.e2e-spec.ts']
+  },
   capabilities: {
     'browserName': 'chrome'
   },

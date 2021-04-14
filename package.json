@@ -5,9 +5,13 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "test": "ng test ",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "testcoverage": "ng test --no-watch --code-coverage",
+    "alltests" : "npm run testcoverage && npm run integratedmockedtests",
+    "integratedmockedtests" : "npm run ng e2e -- --suite=core",
+    "integratedhottests" : "npm run ng e2e -- --suite=core --c integratedhot",
+    "fulle2etests" : "npm run ng e2e -- --suite=critical --c fulle2e"
   },
   "private": true,
   "dependencies": {
