@@ -63,7 +63,8 @@
           "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "test-e2e-app:build",
-			"extraWebpackConfig": "e2e/webpack.config.coverage.js"
+      			"extraWebpackConfig": "e2e/webpack.config.coverage.js",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
